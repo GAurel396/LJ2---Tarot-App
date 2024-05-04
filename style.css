@@ -1,0 +1,16 @@
+body{
+    background-color: #260a34;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+
+.game_canvas {
+    border:2px solid #260a34;
+    width: 256px;
+    height: 224px;
+    background-color: #7d7da3 ;
+    scale: 3;
+
+}

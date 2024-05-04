@@ -1,0 +1,18 @@
+1. figure out resolution
+2. figure out movement between menus
+3. figure out how to shuffle the deck (multiple time based on the input)
+4. figure out how to draw a card and display INFORMATION
+4a. ask about the meaning of draw (General, Love, Business, Gaming, Creative Prompt, Colour, One Simple Word, Self-Reflection)
+4B. Advanced info: Qaballa, Astrology, Mythology, Elemental, Alchemy. 
+5. code in question about more detailed info on the card on the reading page
+6. code in settings (Music? Maybe not even needed lol)
+    Volume. Deck back. Mat. Reversals if. 
+7. code in explanation page (should be easy just display the info)
+    explanation WHat is Tarot? History in brief brief? WHat can it be Used for? Elemental Correspondences? Astrological Correspondences
+    What is Qabala? Basics of Qabala. How to read spread? Reversals (if i code them them)? Sources (Tarot Wisdom, Tarot Deciphered, LIber Theta)
+
+
+EXTRAS if i have time
+8. spreads mode: a max of 3x3 grid. Some defined spreads with positions and also custom mode - click where you want card drawn.
+9. track last thirty reads and display elemental breakdown. 
+10. Reversals (shouldnt be hard just random chance to flip the card. If i have setting reveral chance should be input in settings.) 
