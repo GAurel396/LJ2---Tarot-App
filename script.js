@@ -3,8 +3,70 @@ const ctx = canvas.getContext("2d");
 canvas.width  = 256;
 canvas.height = 224;
 const test = document.querySelector("button");
-//selecting body to implement pause on click-out
 
+//LTJAM logo
+const logo = new Image();
+logo.src = "/graphics/splash-screen-sheet.png"
+logo.classList.add("logo");
+//Title screen
+const title = new Image();
+title.src = "/graphics/TITLEplaceholder.png";
+title.classList.add ("title_screen");
+//menu
+const menu = new Image();
+menu.src = "/graphics/MMPLACEHOLDER.png";
+menu.classList.add("menu");
+
+
+function init () {
+        console.log("Init function works");
+        let frames = 0;
+        function draw_logo () {
+
+                let sx = 0 + (frames*256)
+                let sy = 0
+                let sw = 256;
+                let sh = 224;
+                //ctx.fillStyle = "#000";
+                //ctx.fillRect(0,0,256,224);
+                ctx.drawImage(logo, sx, sy, sw, sh, 0, 0, 255, 223);        
+                frames ++;   
+                if (frames >= 5) {
+                        clearInterval(animate_logo);
+                        frames = 1;
+                        draw_title();
+                } 
+                                
+                };
+                let animate_logo = setInterval(draw_logo,  750);
+        }
+
+
+function draw_title () {
+        console.log ("Title is called is called")
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(title, 0, 0, 255, 223);  
+        addEventListener("keydown", function(e) {
+                console.log("Which key was press:" + e.key)
+        })
+}       
+
+function draw_menu () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(menu, 0,0, 256 ,224);
+};
+
+function draw_shuffle (){
+
+};
+
+function draw_about (){
+
+};
+window.addEventListener("load", init);
+//canvas.addEventListener("keydown", function draw_menu()); */
+
+/*
 const body = document.querySelector("body");
 const deck_board = new Image ();
 deck_board.src = "graphics/CARDDECKPLACEMENT.png"
@@ -54,55 +116,8 @@ card_size_y = 96;
                         ctx.fill();
                         ctx.stroke();
                 }
-
-test.addEventListener("click", test_shuffling())
-
-
+*/
+test.addEventListener("click", init())
 
 
-LTJAM logo
-const logo = new Image();
-logo.src = "/graphics/splash-screen-sheet.png"
-logo.classList.add("logo");
-//Title screen
-const title = new Image();
-title.src = "/graphics/TITLEplaceholder.png";
-title.classList.add ("title_screen");
-//menu
-const menu = new Image();
-menu.src = "/graphics/MMPLACEHOLDER.png";
-menu.classList.add("menu");
 
-function init () {
-        
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        console.log("Init function works");
-        //initial screen
-        function draw_logo () {
-                let frames = 1;
-                let sx = 0
-                let sy = 0
-                let sw = 256;
-                let sh = 224;
-                ctx.fillStyle = "#000";
-                ctx.fillRect(0,0,256,224);
-                logo.onload = () => {          ctx.drawImage(logo, frames*sx, sy, sw, sh, 0, 0, 256, 224);        }   
-                if (frames < 5) frames ++;
-        }
-
-        draw_logo();
-        //requestAnimationFrame (draw_logo())
-        //title.onload = () => {          ctx.drawImage(title, 0, 0, 256, 224);        };
-
-}
-
-function draw_menu () {
-                menu.onload = () => {   ctx.drawImage(menu, 0,0, 256 ,224)}
-};
-
-function shuffle () {
-
-};
-
-window.addEventListener("load", init());
-//canvas.addEventListener("keydown", function draw_menu()); */
