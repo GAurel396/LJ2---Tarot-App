@@ -60,7 +60,7 @@ test.addEventListener("click", test_shuffling())
 
 
 
-/* LTJAM logo
+LTJAM logo
 const logo = new Image();
 logo.src = "/graphics/splash-screen-sheet.png"
 logo.classList.add("logo");
