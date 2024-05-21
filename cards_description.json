@@ -1,16 +1,67 @@
-{ "cards" : [
-    {
-    "title": "fool",
-    "number":"0",
-    "image":"/graphics/cards/0.png",
-    "basic keywords":"adventure, beginning, foolish decision, birth, nothing, everything, all or nothing",
-    "love": "unexpected or new love. doing crazy things for love",
-    "career": "doing some out of left pocket, leaving job for different one",
-    "question": "",
-    "gaming": "try a genre you have been interested in. play a challenge of your favourite game.",
-    "astrology": "Uranus",
-    "elements": "air",
-    "color":"" 
-    }
+{
+    "cards": [
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        },
+        {
+            "title": "The Magus",
+            "suntitle": "Air - Mercury - Beth",
+            "number": "1",
+            "image": "graphics/cards/1.png",
+            "description": " Historically, Magus was both an enlightened channeler of arcane powers and a trickster, juggler. Skill is implied in all of these depictions. All the tools they need are prepared and lain out for them - you too have all the tools you need to begin. Magician can also stand in for directed effort, a creaive endeavour, mind applied single-handedly to a task at hand."
+        },
+        {
+            "title": "The Veiled One",
+            "subtitle": "Water - Moon - Gimel",
+            "number": "2",
+            "image": "/graphics/cards/2.png",
+            "description": "lorem ipsum"
+        },
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        },
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        },
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        },
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        },
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        },
+        {   
+            "title": "The Fool",
+            "subtitle": "Air - Uranus - Aleph",
+            "number": "0",
+            "image": "/graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+        }
     ]
 }
