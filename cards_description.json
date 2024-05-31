@@ -1,67 +1,180 @@
-{
-    "cards": [
+[
+        
         {   
             "title": "The Fool",
             "subtitle": "Air - Uranus - Aleph",
             "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "image": "graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["purity", "blank slate", "foolishness", "uniqueness", "journey", "unorthodox", "carelesness"]
         },
         {
             "title": "The Magus",
-            "suntitle": "Air - Mercury - Beth",
+            "subtitle": "Air - Mercury - Beth",
             "number": "1",
             "image": "graphics/cards/1.png",
-            "description": " Historically, Magus was both an enlightened channeler of arcane powers and a trickster, juggler. Skill is implied in all of these depictions. All the tools they need are prepared and lain out for them - you too have all the tools you need to begin. Magician can also stand in for directed effort, a creaive endeavour, mind applied single-handedly to a task at hand."
+            "description": " Historically, Magus was both an enlightened channeler of arcane powers and a trickster, juggler. Skill is implied in all of these depictions. All the tools they need are prepared and lain out for them - you too have all the tools you need to begin. Magician can also stand in for directed effort, a creaive endeavour, mind applied single-handedly to a task at hand.",
+            "short_desc": ["skill", "preparedness", "beginning", "will", "adaptation", "cunning", "subtlety"]
         },
         {
             "title": "The Veiled One",
             "subtitle": "Water - Moon - Gimel",
             "number": "2",
-            "image": "/graphics/cards/2.png",
-            "description": "lorem ipsum"
+            "image": "graphics/cards/2.png",
+            "description": "lorem ipsum",
+            "short_desc": ["intuition", "secret", "wisdom", "knowledge", "unconscious,", "memory", "fluctuation"]
         },
         {   
-            "title": "The Fool",
-            "subtitle": "Air - Uranus - Aleph",
-            "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "title": "The Creator",
+            "subtitle": "Earth - Venus - Daleth",
+            "number": "3",
+            "image": "graphics/cards/3.png",
+            "description": ".",
+            "short_desc":["fertility ", "nature", "creativity","luxury", "love", "passion", "fruitfulness"]
         },
         {   
-            "title": "The Fool",
-            "subtitle": "Air - Uranus - Aleph",
-            "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "title": "The Founder",
+            "subtitle": "Fire - Aries - Heh",
+            "number": "4",
+            "image": "graphics/cards/4.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["order", "expansion", "initiative", "stubornness", "realization", "stability", "fierceness"]
         },
         {   
-            "title": "The Fool",
-            "subtitle": "Air - Uranus - Aleph",
-            "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "title": "The Hierophant",
+            "subtitle": "Earth - Taurus - Vav",
+            "number": "5",
+            "image": "graphics/cards/5.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["tradition", "institutions", "mediator", "teaching", "initiation", "listening", "solid"]
         },
         {   
-            "title": "The Fool",
-            "subtitle": "Air - Uranus - Aleph",
-            "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "title": "The Lovers",
+            "subtitle": "Air - Gemini - Zayin",
+            "number": "6",
+            "image": "graphics/cards/6.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc":["union", "choosing fate","love", "combining opposites", "analysis", "trials overcome", "attraction" ]
         },
         {   
-            "title": "The Fool",
-            "subtitle": "Air - Uranus - Aleph",
+            "title": "The Chariot",
+            "subtitle": "Water - Cancer - Cheth",
             "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "image": "graphics/cards/0.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["protection", "triumph", "motion", "self-control", "prudence", "loyalty", "transport"]
         },
         {   
-            "title": "The Fool",
-            "subtitle": "Air - Uranus - Aleph",
-            "number": "0",
-            "image": "/graphics/cards/0.png",
-            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment."
+            "title": "Adjustment",
+            "subtitle": "Air - Libra - Aleph",
+            "number": "8",
+            "image": "graphics/cards/8.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["justice", "equilibrium", "harmony", "neutrality", "correction", "truth", "laws" ]
+        },
+        {   
+            "title": "The Hermit",
+            "subtitle": "Earth - Virgo - Yod ",
+            "number": "9",
+            "image": "graphics/cards/9.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["loneliness", "isolation", "illumination", "journey into self", "service", "wisdom", "abandonment"]
+        },
+        {   
+            "title": "The Wheel of Fortune",
+            "subtitle": "Fire - Jupiter - Kaph ",
+            "number": "10",
+            "image": "graphics/cards/10.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["luck", "fate", "cycles", "repetition", "revolution", "ups-downs", "gambling"]
+        },
+        {   
+            "title": "Fortitude",
+            "subtitle": "Fire - Leo  - Teth",
+            "number": "11",
+            "image": "graphics/cards/11.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["might", "courage", "endurance", "gentleness", "joy in desire", "action", "primal nature"]
+        },
+        {   
+            "title": "The Hanged One",
+            "subtitle": "Water - Neptune - Mem",
+            "number": "12",
+            "image": "graphics/cards/12.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["self sacrifice", "self flagellation", "passivity", "resignation", "alternate view", "waiting", "punishment"]
+        },
+        {   
+            "title": "Rebirth",
+            "subtitle": "Water - Scorpio - Nun",
+            "number": "13",
+            "image": "graphics/cards/13.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["transformation", "death/renewal", "regeneration", "inevitability", "difficult change", "death", "letting go"]
+        },
+        {   
+            "title": "Temperance",
+            "subtitle": "FIre - Sagittarius - Samekh",
+            "number": "14",
+            "image": "graphics/cards/14.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["moderation", "combination", "precision", "middle path", "synthesis", "trial", "refinement"]
+        },
+        {   
+            "title": "The Devil",
+            "subtitle": "Earth - Capricorn - Ayin",
+            "number": "15",
+            "image": "graphics/cards/15.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["seeing truth", "mockery", "bondage", "material focus", "unconventional", "climbing", "temptation"]
+        },
+        {   
+            "title": "The Tower",
+            "subtitle": "Fire - Mars - Peh ",
+            "number": "16",
+            "image": "graphics/cards/16.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["purification", "breakthrough", "eruption", "ruin", "fighting,", "adversity,", "revelation"]
+        },
+        {   
+            "title": "The Star",
+            "subtitle": "Air - Aquarius  - Tzaddi",
+            "number": "17",
+            "image": "graphics/cards/17.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["hope", "promise", "sanctuary", "assistance", "prospects", "freedom", "respite"]
+        },
+        {   
+            "title": "The Moon",
+            "subtitle": "Water - Pisces - Qoph",
+            "number": "18",
+            "image": "graphics/cards/18.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["illusion", "dream", "terror", "subconscious", "past", "instict", "taboo"]
+        },
+        {   
+            "title": "The Sun",
+            "subtitle": "Fire - Sun - Resh",
+            "number": "19",
+            "image": "graphics/cards/19.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["joy", "celebration", "self-expression", "gain", "health", "center of attention", "clarity"]
+        },
+        {   
+            "title": "The Gate",
+            "subtitle": "Fire - Sagittarius - Shin",
+            "number": "20",
+            "image": "graphics/cards/20.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["final decision", "result", "redemption", "summons", "fresh start", "decisive step", "refining fire"]
+        },
+        {   
+            "title": "The Universe",
+            "subtitle": "Earth - Saturn - Tav",
+            "number": "21",
+            "image": "graphics/cards/21.png",
+            "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
+            "short_desc": ["closure", "completion", "travel", "reward", "wholeness", "overcoming limitations", "recognition"]
         }
+
     ]
-}

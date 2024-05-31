@@ -1,17 +1,23 @@
 @font-face {
     font-family: bm_space;
-    src: url(/fonts/bm-space.ttf)
+    src: url(/fonts/bm-space.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: font_04b03;
-    src: url(/fonts/04b03.ttf)
+    src: url(/fonts/04b03.ttf);
+    font-weight: normal;
+    font-style: normal;
 
 }
 
 @font-face {
     font-family: bm-japan;
-    src: url(/fonts/bm-japan.ttf)
+    src: url(/fonts/bm-japan.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 body{
@@ -23,6 +29,6 @@ body{
 }
 .game_canvas {
 
-    background-color: #7d7da3 ;
-    scale: 1;
+    background-color:#000000  ;
+    scale: 2;
 }
