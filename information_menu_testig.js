@@ -2,7 +2,7 @@ const canvas = document.querySelector(".game_canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = 256;
 canvas.height = 224;
-const test = document.querySelector("button");
+
 let state;
 let tarot_info = [];
 fetch("cards_description.json").then((response) => response.json()).then((json) => {
@@ -130,7 +130,12 @@ function draw_explanation () {
                                 ctx.fillStyle = "#7d7da3";
                                 ctx.font = "8px font_04b03";
                                 ctx.fillText(subtitle, 192, 45);
-                                ctx.fill
+                                let iterate_keywords = 0;
+                                while (iterate_keywords < keywords.length) {
+                                        ctx.fillStyle = "260a34";
+                                        ctx.font = "8px font_04b03";
+                                        ctx.fillText(keywords[iterate_keywords], 196, 63 + (63*iterate_keywords))
+                                };
         };
 
 

@@ -28,7 +28,6 @@ body{
     height: 100dvh;
 }
 .game_canvas {
-
     background-color:#000000  ;
     scale: 1;
 }
