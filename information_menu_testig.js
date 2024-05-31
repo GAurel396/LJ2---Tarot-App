@@ -121,7 +121,7 @@ function draw_explanation () {
                 title = card.title;
                 subtitle = card.subtitle;
                 keywords = card.short_desc;}
-        drawn_card_image.onload => () => ctx.drawImage(drawn_card_image, 21, 48, 96, 128));
+        drawn_card_image.onload = () => {ctx.drawImage(drawn_card_image, 21, 48, 96, 128);};
 
 }
 
