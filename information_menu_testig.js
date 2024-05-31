@@ -121,7 +121,18 @@ function draw_explanation () {
                 title = card.title;
                 subtitle = card.subtitle;
                 keywords = card.short_desc;}
-        drawn_card_image.onload = () => {ctx.drawImage(drawn_card_image, 21, 48, 96, 128);};
+        drawn_card_image.onload = () => {
+                                ctx.drawImage(drawn_card_image, 21, 48, 96, 128);
+                                ctx.fillStyle = "#260a34";
+                                ctx.font = "9px bm_space";
+                                ctx.textAlign = "center";
+                                ctx.fillText(title, 192,33);
+                                ctx.fillStyle = "#7d7da3";
+                                ctx.font = "8px font_04b03";
+                                ctx.fillText(subtitle, 192, 45);
+                                ctx.fill
+        };
+
 
 }
 

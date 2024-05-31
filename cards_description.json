@@ -59,7 +59,7 @@
         {   
             "title": "The Chariot",
             "subtitle": "Water - Cancer - Cheth",
-            "number": "0",
+            "number": "7",
             "image": "graphics/cards/0.png",
             "description": "This card is nothing and everything. Fool who jumps between experience of every other card. This card beckons us to be fools, to indulge in what others may view as madness. Foolish love, great adventure, quitting your job, acting childishly for just a moment.",
             "short_desc": ["protection", "triumph", "motion", "self-control", "prudence", "loyalty", "transport"]
@@ -81,7 +81,7 @@
             "short_desc": ["loneliness", "isolation", "illumination", "journey into self", "service", "wisdom", "abandonment"]
         },
         {   
-            "title": "The Wheel of Fortune",
+            "title": "Fortune",
             "subtitle": "Fire - Jupiter - Kaph ",
             "number": "10",
             "image": "graphics/cards/10.png",
