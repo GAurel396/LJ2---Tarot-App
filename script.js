@@ -1,11 +1,28 @@
+const debug = false;
+function debugLog(message) {
+    if (debug) {
+        console.log(message);
+    }
+}
+
 const canvas = document.querySelector(".game_canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = 256;
 canvas.height = 224;
 
+const bmSpaceFont = new FontFace('bm-space', 'url(fonts/bm-space.ttf)');
+const bmJapanFont = new FontFace('bm-japan', 'url(fonts/bm-japan.ttf)');
+const font04b03 = new FontFace('font-04b03', 'url(fonts/04b03.ttf)');
+const myFonts = [bmSpaceFont, bmJapanFont, font04b03];
+myFonts.forEach(myFont => myFont.load().then((font) => {
+  document.fonts.add(font);
+
+  debugLog('Font loaded');
+}));
+
 //LTJAM logo
 const logo = new Image();
-logo.src = "/graphics/splash-screen-sheet.png"
+logo.src = "graphics/splash-screen-sheet.png"
 logo.classList.add("logo");
 //Title screen
 const title = new Image();
@@ -13,14 +30,14 @@ title.src = "graphics/title.png"
 title.classList.add("title_screen");
 //menu
 const menu = new Image();
-menu.src = "/graphics/MMPLACEHOLDER.png";
+menu.src = "graphics/MMPLACEHOLDER.png";
 menu.classList.add("menu");
 //tracks which state the game is in
 let state = "logo"
 
 //here the game initializes
 function init() {
-        console.log("Init function works");
+        debugLog("Init function works");
         let frames = 0;
 
         function draw_logo() {
@@ -41,29 +58,20 @@ function init() {
         let animate_logo = setInterval(draw_logo, 750);
 }
 function draw_title() {
-        console.log("Title is called");
+        debugLog("Title is called");
+        state = "title";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(title, 0, 0, 255, 223);
-        ctx.font =  "12px bm_japan";
+        ctx.font =  "12px bm-japan";
         ctx.textAlign  = "center";
         ctx.fillText("Press Start", 178, 113);
-        state = "title";
-        addEventListener("keydown", function (e) {
-            console.log("which key was press: " + e.key);
-            if (state === "title" && e.key === "Enter") {
-                draw_menu();
-            }
-        });
     }
 
 function draw_menu() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
         state = "menu";
-        //main_menu.onload = () => {
-                drawBG();
-                draw_rectangle();
-        //};
-
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBG();
+        draw_rectangle();
 };
 
 const main_menu = new Image();
@@ -111,33 +119,6 @@ function draw_rectangle() {
 }
 
 
-window.addEventListener("keydown", function (e) {
-        console.log(e.key);
-        if (state === "menu") {
-                if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-                        if (menu_option === 1) {
-                                menu_option = 2;
-                        } else if (menu_option === 2) {
-                                menu_option = 1;
-                        }
-                }
-                draw_rectangle();
-        }
-
-});
-
-window.addEventListener("keydown", function (e) {
-        if (state === "menu" && menu_option === 1) {
-                if (e.key === "y" || e.key === "z" || e.key === " ") {
-                        switch_shuffle_menu();   
-                } 
-        } else if (state === "menu" && menu_option === 2) {
-                if (e.key === "y" || e.key === "z" || e.key === " ") {
-                        switch_about();
-                }
-        } 
-});
-
 let about_screen = new Image();
 about_screen.src = "graphics/ABOUTPLACEHOLDER-export.png"
 let page_w = 93;
@@ -160,7 +141,7 @@ let example = new Image();
 example.src = "graphics/cards/0.png";
 
 let pageleft = page1;
-let pageright = page2; 
+let pageright = page2;
 let plx = 92;
 let ply = 151;
 let book_state = 1;
@@ -169,20 +150,20 @@ function change_book_state (){
         if (book_state === 1) {
                 pageleft = page1;
                 pageright = page2;
-                plx = 92; 
+                plx = 92;
                 ply = 151;
         } else {
                 pageleft = example;
                 pageright = page4;
-                plx = 96; 
+                plx = 96;
                 ply = 128;
         }
         switch_about();
 };
 
 function switch_about() {;
+        debugLog(state);
         state = "about";
-        console.log(state);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(about_screen, sx, sy, sw, sh, 0, 0, 256, 224);
         ctx.drawImage(pageleft, 26, 22, plx, ply);
@@ -190,64 +171,32 @@ function switch_about() {;
 };
 
 
-window.addEventListener("keydown", function (e) {
-        if (state === "about") {
-                if (e.key === "ArrowRight" && book_state < 2) {
-                        console.log("key pressed")
-                        book_state += 1;
-                        console.log(book_state);
-                        change_book_state();
-                } else if (e.key === "ArrowLeft" && book_state > 1) {
-                        console.log("left pressed");
-                      book_state -= 1;    
-                      console.log (book_state);
-                      change_book_state();       
-                }
-        }
-
-}) 
-
 let tarot_info = [];
 fetch("cards_description.json").then((response) => response.json()).then((json) => {
+        debugLog(json)
+        debugLog("INFO LOADED")
         tarot_info = json;
-        console.log(json)
-        console.log("INFO LOADED")}
-);
+});
+
 let shuffle_menu = new Image();
-shuffle_menu.src = "graphics/shuffling_screesnng.png"; 
+shuffle_menu.src = "graphics/shuffling_screesnng.png";
 let shuffling = new Image();
 shuffling.src = "graphics/shufflin_screen.png";
 
-
-
 let tarot_array = [];
-for (let i = 1; i <= 22; i++) {
+for (let i = 0; i <= 21; i++) {
         tarot_array.push(i);
 };
- 
+
 function switch_shuffle_menu() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         state = "shuffle_menu";
-        setTimeout(function(){
-                ctx.drawImage(shuffle_menu, 0,0, 256, 224);
-                ctx.font = "12px bm-japan";
-                ctx.fillStyle = " #ff08ff  ";
-                ctx.textAlign = "center";
-                ctx.fillText("Press A to shuffle.", 128, 190);
-        }, 500);
+        ctx.drawImage(shuffle_menu, 0,0, 256, 224);
+        ctx.font = "12px bm-japan";
+        ctx.fillStyle = " #ff08ff  ";
+        ctx.textAlign = "center";
+        ctx.fillText("Press A to shuffle.", 128, 190);
 };
-
-addEventListener("keydown", function (e) {
-        if (state === "shuffle_menu") {
-            if (e.key === "y" || e.key === "z" || e.key === " ") {
-                deal_card();
-            } 
-        } else if (state === "shuffling") {
-                stop_animation();
-                this.setTimeout(draw_explanation(), 1000);
-        }
-    });
-
 
 function shuffle() {
         let shuffle_deck = (array) => {
@@ -260,16 +209,18 @@ function shuffle() {
         shuffle_deck(tarot_array);
         return (tarot_array[0]);
 };
+
 let drawn_card
+let shuffling_animation;
 function deal_card() {
+        state = "shuffling";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(shuffle_menu, 0,0, 256, 224);
-        animating_shuffling = setInterval(shuffle_animation, 100);
-        shuffle_animation();
-        state = "shuffling";
         shuffle();
+        shuffling_animation = setInterval(shuffle_animation, 100);
+        shuffle_animation();
         drawn_card = tarot_array[0];
-        console.log(drawn_card);
+        debugLog(drawn_card);
 };
 
 let shuffle_frame = 0;
@@ -285,11 +236,10 @@ function shuffle_animation () {
 }
 
 function stop_animation () {
-        clearInterval(animating_shuffling);
+    clearInterval(shuffling_animation);
 }
 
 let keyword = 0;
-keyword_x = 0;
 
 const fail_safe = new Object;
 fail_safe.title = "The Fool";
@@ -298,56 +248,146 @@ fail_safe.number = "0";
 fail_safe.image = "graphics/cards/0.png";
 fail_safe.short_desc = ["purity", "blank slate", "foolishness", "uniqueness", "journey", "unorthodox", "carelesness"];
 
-
 let explanation_bg = new Image();
 explanation_bg.src = "graphics/explanation_screem.png";
 function draw_explanation () {
+        debugLog(drawn_card);
+        debugLog(tarot_info);
+        debugLog(card);
         state = "explanation_menu";
-        console.log(drawn_card)
         let card = tarot_info[drawn_card];
         let drawn_card_image;
         let title;
         let subtitle;
         let keywords;
-        console.log(tarot_info);
-        console.log(card);
-        drawn_card_image = new Image();;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        setTimeout(function(){
-                ctx.drawImage(explanation_bg, 0,0, 256, 224);
-
-        }, 200);
-        if (tarot_info.length === 0 || drawn_card === undefined) {
+        drawn_card_image = new Image()
+        if (tarot_info.length === 0 || card === undefined) {
                 drawn_card_image.src = fail_safe.image;
-                console.log("it failed to load. fallback to the Fool")
-        } else {drawn_card_image.src = card.image;
+                title = fail_safe.title;
+                subtitle = fail_safe.subtitle;
+                keywords = fail_safe.short_desc;
+                debugLog("it failed to load. fallback to the Fool")
+        } else {
+                drawn_card_image.src = card.image;
                 title = card.title;
                 subtitle = card.subtitle;
-                keywords = card.short_desc;}
+                keywords = card.short_desc;
+        }
+
         drawn_card_image.onload = () => {
-                                ctx.drawImage(drawn_card_image, 21, 48, 96, 128);
-                                ctx.fillStyle = "#260a34";
-                                ctx.font = "9px bm_space";
-                                ctx.textAlign = "center";
-                                ctx.fillText(title, 192,33);
-                                ctx.fillStyle = "#7d7da3";
-                                ctx.font = "8px font_04b03";
-                                ctx.fillText(subtitle, 192, 45);
-                                let iterate_keywords = 0;
-                                while (iterate_keywords < keywords.length) {
-                                        ctx.fillStyle = "260a34";
-                                        ctx.font = "8px font_04b03";
-                                        ctx.fillText(keywords[iterate_keywords], 196, 63 + (63*iterate_keywords))
-                                };
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(explanation_bg, 0,0, 256, 224);
+                ctx.drawImage(drawn_card_image, 21, 48, 96, 128);
+                ctx.fillStyle = "#260a34";
+                ctx.font = "9px bm-space";
+                ctx.textAlign = "center";
+                ctx.fillText(title, 192,33);
+                ctx.fillStyle = "#7d7da3";
+                ctx.font = "8px font-04b03";
+                ctx.fillText(subtitle, 192, 45);
+                let iterate_keywords = 0;
+                ctx.fillStyle = "#260a34";
+                ctx.font = "8px font-04b03";
+                while (iterate_keywords < keywords.length) {
+                        ctx.fillText(keywords[iterate_keywords], 196, 63 + (12*iterate_keywords))
+                        iterate_keywords += 1;
+                };
         };
-
-
 }
 
-addEventListener("keydown", function (e) {
-        if (state == "explanation_menu" && e.key === "x") {
-                console.log("switches back to menu")
-                draw_menu()
+function isAButton(eventKey) {
+        return eventKey === "z" || eventKey === "y" || eventKey === " ";
+}
+function isBButton(eventKey) {
+        return eventKey === "x";
+}
+function isStartButton(eventKey) {
+        return eventKey === "Enter";
+}
+function isLeftButton(eventKey) {
+        return eventKey === "ArrowLeft";
+}
+function isRightButton(eventKey) {
+        return eventKey === "ArrowRight";
+}
+
+function titleKeyPressHandler(eventKey) {
+        if (isStartButton(eventKey)) {
+                draw_menu();
         }
-});
+}
+
+function menuKeyPressHandler(eventKey) {
+        if (isRightButton(eventKey) || isLeftButton(eventKey)) {
+                if (menu_option === 1) {
+                        menu_option = 2;
+                } else if (menu_option === 2) {
+                        menu_option = 1;
+                }
+
+                draw_rectangle();
+        }
+
+        if (isAButton(eventKey)) {
+                if (menu_option === 1) {
+                        switch_shuffle_menu();
+                } else if (menu_option === 2) {
+                        switch_about();
+                }
+        }
+}
+
+function shuffleMenuKeyPressHandler(eventKey) {
+        if (isAButton(eventKey)) {
+            deal_card();
+        } else if (isBButton(eventKey)) {
+            draw_menu();
+        }
+}
+
+function shufflingKeyPressHandler(eventKey) {
+        if (isAButton(eventKey)) {
+                stop_animation();
+                draw_explanation();
+        }
+}
+
+function aboutKeyPressHandler(eventKey) {
+        if (isRightButton(eventKey) && book_state < 2) {
+                book_state += 1;
+                change_book_state();
+        } else if (isLeftButton(eventKey) && book_state > 1) {
+                book_state -= 1;
+                change_book_state();
+        } else if (isBButton(eventKey)) {
+                draw_menu();
+        }
+}
+
+function explanationMenuKeyPressHandler(eventKey) {
+        if (isBButton(eventKey)) {
+                draw_menu();
+        }
+}
+
+function keyPressHandler(e) {
+        const eventKey = e.key;
+        if (state === "title") {
+                titleKeyPressHandler(eventKey);
+        } else if (state === "menu") {
+                menuKeyPressHandler(eventKey);
+        } else if (state === "shuffle_menu") {
+                shuffleMenuKeyPressHandler(eventKey);
+        } else if (state === "shuffling") {
+                shufflingKeyPressHandler(eventKey);
+        } else if (state === "about") {
+                aboutKeyPressHandler(eventKey);
+        } else if (state === "explanation_menu") {
+                explanationMenuKeyPressHandler(eventKey);
+        } else {
+                throw new Error("Unknown state: " + state);
+        }
+}
+
 window.addEventListener("load", init);
+window.addEventListener("keydown", keyPressHandler);

@@ -109,11 +109,8 @@ function draw_explanation () {
         console.log(tarot_info);
         console.log(card);
         drawn_card_image = new Image();;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        setTimeout(function(){
-                ctx.drawImage(explanation_bg, 0,0, 256, 224);
-
-        }, 200);
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.drawImage(explanation_bg, 0,0, 256, 224);
         if (tarot_info.length === 0 || drawn_card === undefined) {
                 drawn_card_image.src = fail_safe.image;
                 console.log("it failed to load. fallback to the Fool")
@@ -134,7 +131,8 @@ function draw_explanation () {
                                 while (iterate_keywords < keywords.length) {
                                         ctx.fillStyle = "260a34";
                                         ctx.font = "8px font_04b03";
-                                        ctx.fillText(keywords[iterate_keywords], 196, 63 + (63*iterate_keywords))
+                                        ctx.fillText(keywords[iterate_keywords], 196, 63 + (10*iterate_keywords));
+                                        iterate_keywords++;
                                 };
         };
 
