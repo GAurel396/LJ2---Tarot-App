@@ -15,7 +15,7 @@ fetch("cards_description.json").then((response) => response.json()).then((json) 
         debugLog(json)
         debugLog("INFO LOADED")
         tarot_info = json;
-        info_loaded = 1;
+        info_loaded = true;
 });
 const bmSpaceFont = new FontFace('bm-space', 'url(fonts/bm-space.ttf)');
 const bmJapanFont = new FontFace('bm-japan', 'url(fonts/bm-japan.ttf)');
