@@ -15,6 +15,7 @@ fetch("cards_description.json").then((response) => response.json()).then((json) 
         debugLog(json)
         debugLog("INFO LOADED")
         tarot_info = json;
+        info_loaded = 1;
 });
 const bmSpaceFont = new FontFace('bm-space', 'url(fonts/bm-space.ttf)');
 const bmJapanFont = new FontFace('bm-japan', 'url(fonts/bm-japan.ttf)');
@@ -234,6 +235,7 @@ function shuffle_animation () {
 
 function stop_animation () {
     clearInterval(shuffling_animation);
+    draw_explanation();
 }
 
 let keyword = 0;
@@ -248,6 +250,10 @@ fail_safe.short_desc = ["purity", "blank slate", "foolishness", "uniqueness", "j
 let explanation_bg = new Image();
 explanation_bg.src = "graphics/explanation_screem.png";
 function draw_explanation () {
+        if (!info_loaded) {
+                setTimeout(draw_explanation, 100); // Retry after 100ms if info not loaded
+                return;
+            }
         debugLog(drawn_card);
         debugLog(tarot_info);
         debugLog(card);
