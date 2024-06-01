@@ -10,6 +10,12 @@ const ctx = canvas.getContext("2d");
 canvas.width = 256;
 canvas.height = 224;
 
+let tarot_info = [];
+fetch("cards_description.json").then((response) => response.json()).then((json) => {
+        debugLog(json)
+        debugLog("INFO LOADED")
+        tarot_info = json;
+});
 const bmSpaceFont = new FontFace('bm-space', 'url(fonts/bm-space.ttf)');
 const bmJapanFont = new FontFace('bm-japan', 'url(fonts/bm-japan.ttf)');
 const font04b03 = new FontFace('font-04b03', 'url(fonts/04b03.ttf)');
@@ -62,9 +68,6 @@ function draw_title() {
         state = "title";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(title, 0, 0, 255, 223);
-        ctx.font =  "12px bm-japan";
-        ctx.textAlign  = "center";
-        ctx.fillText("Press Start", 178, 113);
     }
 
 function draw_menu() {
@@ -171,12 +174,6 @@ function switch_about() {;
 };
 
 
-let tarot_info = [];
-fetch("cards_description.json").then((response) => response.json()).then((json) => {
-        debugLog(json)
-        debugLog("INFO LOADED")
-        tarot_info = json;
-});
 
 let shuffle_menu = new Image();
 shuffle_menu.src = "graphics/shuffling_screesnng.png";
