@@ -68,7 +68,7 @@ function draw_title() {
         debugLog("Title is called");
         state = "title";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(title, 0, 0, 255, 223);
+        ctx.drawImage(title, 0, 0, 256, 224);
     }
 
 function draw_menu() {
@@ -256,7 +256,6 @@ function draw_explanation () {
             }
         debugLog(drawn_card);
         debugLog(tarot_info);
-        debugLog(card);
         state = "explanation_menu";
         let card = tarot_info[drawn_card];
         let drawn_card_image;
